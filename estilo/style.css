@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #b0c4b1;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    "logo titulo paginas"
+    "logo titulo paginas"
+    "logo titulo paginas";
+    grid-template-columns: 2fr 4fr 2fr;
+    align-items: stretch;
+}
+
+.logo {
+    grid-area: logo;
+}
+.titulo {
+    grid-area: titulo;
+}
+
+.paginas { 
+   grid-area: paginas;
+   display: flex;
+   flex-direction: column;
+}
+.paginas li {
+    margin: 5px;
+}
+.paginas .izq{
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.paginas ul {
+    display: flex;
+    flex-direction: row-reverse;
+ }
+
+ul {
+    list-style: none;
+}
+
+.paginas li {
+    border: 1px solid black
+}
+
+body {
+    background-color: #dedbd2
+}
+
+.imgCentral {
+    margin: 50px;
+    display: flex;
+    justify-content:center; 
+    align-items:center;
+
+}
+h1 {
+    color: #4a5759;
+    font-size: 100px;
+    display: flex;
+    justify-content:center;   
+}
+
+.productos {
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.productos {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.productos div {
+    margin: 20px;
+}
+footer {
+    background-color: #b0c4b1;
+  
+}
+.encabezado {
+    display: flex;
+    justify-content: center;
+}
+
