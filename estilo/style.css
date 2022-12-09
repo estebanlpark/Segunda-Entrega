@@ -13,12 +13,13 @@ header {
     "logo titulo paginas";
     grid-template-columns: 2fr 4fr 2fr;
     align-items: stretch;
+    
 }
 
-.logo {
+.header_logo {
     grid-area: logo;
 }
-.titulo {
+.header_titulo {
     grid-area: titulo;
 }
 
@@ -58,6 +59,8 @@ body {
     display: flex;
     justify-content:center; 
     align-items:center;
+    max-inline-size: 100%;
+    block-size: auto;
 
 }
 h1 {
@@ -75,7 +78,8 @@ h1 {
 
 .productos {
     padding: 50px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
 }
 
@@ -91,3 +95,85 @@ footer {
     justify-content: center;
 }
 
+#galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    
+}
+
+.upperFoot ul {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.upperFoot ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 320) { /*mobile*/
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 50px;
+        grid-template-areas: 
+        "navegacion "
+        "principal" 
+        "pie";
+    }
+
+    header {
+        grid-area: navegacion;
+    }
+
+    main {
+        grid-area: principal;
+    }
+
+    footer {
+        grid-area: pie;
+    }
+    #galeria {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+@media (min-width: 768) { /*tablet*/
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px 1fr 50px;
+        grid-template-areas: 
+        "navegacion"
+        "principal" 
+        "pie";
+    }
+    
+    header {
+        grid-area: navegacion;
+    }
+
+    main {
+        grid-area: principal;
+    }
+
+    footer {
+    grid-area: pie;
+    }
+
+    #galeria {
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+}
+
+@media (min-width:1024px) { /*desktop*/
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px 1fr 50px;
+        grid-template-areas: 
+        "navegacion navegacion"
+        "principal principal" 
+        "pie pie";
+    }
+}
